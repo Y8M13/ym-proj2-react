@@ -16,7 +16,7 @@
   "profile": {
     "name": "typicode"
   },
-  "tasker": [
+  "taskers": [
     {
         "id": 1,
         "date": "13 June 2022",

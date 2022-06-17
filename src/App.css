@@ -10,5 +10,11 @@ nav {
   background: green;
   color: rgb(236, 234, 238);
 }
-
+.nav-links {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
 

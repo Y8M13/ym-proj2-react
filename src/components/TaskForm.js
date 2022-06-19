@@ -12,24 +12,25 @@ const TaskForm = () => {
       <form>
         <div>
           <label>Date</label>
-          <input type="text" date="date" id="date" />
+          <input type="text" />
         </div>
         <div>
           <label>Name</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" />
         </div>
         <div>
           <label>Deadline</label>
-          <input type="text" deadline="deadline" id="deadline" />
+          <input type="text" />
         </div>
         <div>
           <label>Comments</label>
-          <input type="text" comments="comments" id="comments" />
+          <input type="text" />
         </div>
         <br/>
-          <button onClick={ handleSubmit }>
+          <input onClick= { handleSubmit } type="submit" value="Create Tasker" />
+          {/* <button onClick={ handleSubmit }>
             Submit
-          </button>
+          </button> */}     
         </form>
     </div>
   )

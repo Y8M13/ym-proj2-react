@@ -10,11 +10,22 @@ nav {
   background: green;
   color: rgb(236, 234, 238);
 }
+
 .nav-links {
   width: 60%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+
+.container {
+  border: 3px solid rgb(54, 54, 60);
+  margin: 10px;
+  padding: 10px;
+}
+
+h1 {
+  color: blue;
 }
 

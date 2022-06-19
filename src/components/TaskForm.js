@@ -11,19 +11,19 @@ const TaskForm = () => {
       <h1>Today's Plan of Action</h1>
       <form>
         <div>
-          <label htmlFor="date">Date</label>
+          <label>Date</label>
           <input type="text" date="date" id="date" />
         </div>
         <div>
-          <label htmlFor="name">Name</label>
+          <label>Name</label>
           <input type="text" name="name" id="name" />
         </div>
         <div>
-          <label htmlFor="deadline">Deadline</label>
+          <label>Deadline</label>
           <input type="text" deadline="deadline" id="deadline" />
         </div>
         <div>
-          <label htmlFor="comments">Comments</label>
+          <label>Comments</label>
           <input type="text" comments="comments" id="comments" />
         </div>
         <br/>

@@ -1,5 +1,6 @@
 // import React from 'react';
 import React, { useEffect, useState } from 'react';
+import TaskCard from "./components/TaskCard.js";
 
 // const TaskLog = () => {
 //   const [taskers, setTaskers ] = useState([])
@@ -37,7 +38,7 @@ const TaskLog = () => {
   },[]);
   
   const [taskers, setTaskers] = useState([]);
-  // const [todos, setTodos] = useState([]);  // setting state inorder for a change
+  const [todos, setTodos] = useState([]);  // setting state inorder for a change
   
   
   const fetchTaskers = async () => {
@@ -47,21 +48,23 @@ const TaskLog = () => {
     console.log(taskers);
     setTaskers(taskers);  // how the state is updated
     
-    const todos = taskers.map(tasker => <li>{ tasker }</li>)
+  //   const todos = taskers.map(tasker => <li>{ tasker }</li>)
      
     
-  }
+  // }
   
   return (
     <div>
       <h1>Task Log</h1>
+      
       {taskers.map(tasker =>(
         <h2 key={ tasker.id }>{ tasker.date }</h2> 
         ))}
-      {/* { todos } */}
+          {/* { todos } */}
+    <TaskCard />
     </div>
   )
-// }
+}
 
 // const submitFormEvent = e => {
 //   e.preventDefault();                                                     

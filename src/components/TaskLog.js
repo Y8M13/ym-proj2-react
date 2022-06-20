@@ -28,10 +28,6 @@ import React, { useState, useEffect } from 'react';
 //        console.log(tasker);
 //     })
 
-
-
-
-
 const TaskLog = () => {
   useEffect(() => {            //used for fetching data
     fetchTaskers();

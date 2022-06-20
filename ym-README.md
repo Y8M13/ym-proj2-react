@@ -8,16 +8,23 @@ The `Task Manager` is a single page application that will be used to create new 
 
 [`COMPONENTS`]
 
-- Home (main page)
-- NavBar (for navigations)
-- Task Log (list of created tasks)
-- Task Form (to input new tasks)
-- Submit button (to sumbit task entries to the back-end and display on Task Log page)
+- Home component (main page that contains an image)
+- NavBar component (for navigations and contains `Links`)
+  - Task Manager
+  - Task Log
+  - Add New Task
+- Task Log component (list of created tasks)
+- Task Form component (to input new tasks)
+
+[`BUTTON`]
+
+- Submit button (located on the Task Form page to sumbit task entries to the back-end and display on Task Log page)
 
 [`ROUTES`]
 
 - / - home
 - /tasklog - Task Log
+- /tasklog/:id - Task Details page - Stretch Goal
 - /taskform - Add New Task page
 
 ### Deliverables
@@ -33,5 +40,6 @@ The `Task Manager` is a single page application that will be used to create new 
 [`STRETCH GOALS`]
 
 - Task Details
+- Task Card
 - Delete button
 - Update button

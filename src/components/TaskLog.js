@@ -1,5 +1,5 @@
 // import React from 'react';
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import TaskCard from "./components/TaskCard.js";
 
 // const TaskLog = () => {
@@ -35,7 +35,7 @@ import React, { useEffect, useState } from 'react';
 const TaskLog = () => {
   useEffect(() => {            //used for fetching data
     fetchTaskers();
-  },[]);
+  }, []);
   
   const [taskers, setTaskers] = useState([]);
   // const [todos, setTodos] = useState([]);  // setting state inorder for a change
@@ -51,22 +51,21 @@ const TaskLog = () => {
   //   const todos = taskers.map(tasker => <li>{ tasker }</li>)
      
     
-  // }
+  }
   
   return (
     <div>
       <h1>Task Log</h1>
-
-        {taskers.map(tasker =>(
-        <h2 key={ tasker.id }>{ tasker.value } </h2> 
+        {taskers.map(tasker => (
+           <h2 key={ tasker.id }>{ tasker.date } </h2> 
         ))}
           {/* { todos } */}
     
     </div>
-  )
-}
+  );
 
-// const submitFormEvent = e => {
+
+// const submitForm = e => {
 //   e.preventDefault();                                                     
   
 
@@ -90,7 +89,8 @@ const TaskLog = () => {
 //   .then(resp => resp.json())
 //   .then(tasker => {
 //     console.log(tasker)  
-//     // renderTaskLogPage();
+
+//     // renderTaskLogPage();     I wont need this line...
 //   })
 }
 

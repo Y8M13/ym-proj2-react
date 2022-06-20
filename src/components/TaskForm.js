@@ -13,7 +13,7 @@ const TaskForm = () => {
   const [deadline, setDeadline] = useState(''); 
   const [comments, setComments] = useState(''); 
 
-  /*An easier way used to create one bucket to capture the state
+  /*An easier way used to create one bucket to capture state
   const [formData, setFormData] = useState({
     date:'', 
     name:'', 
@@ -33,7 +33,7 @@ const TaskForm = () => {
   console.log(name)     
 
   const changeDeadline = (e) => { 
-    setDeadline(e.target.value)   
+    setDeadline(e.target.value)    //this is the user input
   }
   console.log(deadline)  
 
@@ -42,12 +42,12 @@ const TaskForm = () => {
   }
   console.log(comments)     
 
-// console.log(formData)    used to track the changes for the formData changes
+// console.log(formData)   used to track the changes for the formData changes
 
   return (
     <div className="container">
       <h1>Today's Plan of Action</h1>
-        <form>
+        <form onSubmit = { handleSubmit }>
           <div>
             <label>Date</label>
             <input type="text" date="date" id="date" value={ date } onChange={ changeDate }/>   

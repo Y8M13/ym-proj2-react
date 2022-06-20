@@ -27,7 +27,7 @@ const TaskForm = () => {
           <input type="text" />
         </div>
         <br/>
-          <input onClick= { handleSubmit } type="submit" value="Create Tasker" />
+          <input onClick= { handleSubmit } type="submit" value="Create Task" />
           {/* <button onClick={ handleSubmit }>
             Submit
           </button> */}     

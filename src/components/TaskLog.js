@@ -1,6 +1,6 @@
 // import React from 'react';
 import React, { useEffect, useState } from 'react';
-import TaskCard from "./components/TaskCard.js";
+// import TaskCard from "./components/TaskCard.js";
 
 // const TaskLog = () => {
 //   const [taskers, setTaskers ] = useState([])
@@ -38,7 +38,7 @@ const TaskLog = () => {
   },[]);
   
   const [taskers, setTaskers] = useState([]);
-  const [todos, setTodos] = useState([]);  // setting state inorder for a change
+  // const [todos, setTodos] = useState([]);  // setting state inorder for a change
   
   
   const fetchTaskers = async () => {
@@ -56,12 +56,12 @@ const TaskLog = () => {
   return (
     <div>
       <h1>Task Log</h1>
-      
-      {taskers.map(tasker =>(
-        <h2 key={ tasker.id }>{ tasker.date }</h2> 
+
+        {taskers.map(tasker =>(
+        <h2 key={ tasker.id }>{ tasker.value } </h2> 
         ))}
           {/* { todos } */}
-    <TaskCard />
+    
     </div>
   )
 }

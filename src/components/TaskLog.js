@@ -1,5 +1,6 @@
 // import React from 'react';
 import React, { useState, useEffect } from 'react';
+import TaskForm from "./TaskForm";
 // import TaskCard from "./components/TaskCard.js";
 
 // const TaskLog = () => {
@@ -53,12 +54,36 @@ const TaskLog = () => {
     <div>
       <h1>Task Log</h1>
         {taskers.map(tasker => (
-           <h2 key={ tasker.id }>{ tasker.date } </h2> 
-        ))}
+          // <>
+           <h2 key={ tasker.id }>{ tasker.date },  { tasker.name }, { tasker.deadline }, { tasker.comments }</h2> 
+          //  <h2 key={ tasker.id1 }>{ tasker.name } </h2> 
+          //  <h2 key={ tasker.id2 }>{ tasker.deadline } </h2> 
+          //  <h2 key={ tasker.id3 }>{ tasker.comments } </h2> 
+          //  </>
+          ))
+        }
+      
           {/* { todos } */}
     
     </div>
   );
+
+//Working code to pull values from form//
+  // const submitForm(e) => {
+  //   e.preventDefault();
+  //   fetch("http://localhost:4000/taskers", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json"
+  //         },
+  //         body: JSON.stringify( {TaskForm } ),
+  //   });
+  //   }
+
+
+
+
+
 
 
 // const submitForm = e => {

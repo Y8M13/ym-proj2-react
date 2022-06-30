@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 
 
-const TaskForm = (props) => {
+const TaskForm = () => {
+    
   //State//  
   const [date, setDate] = useState('');  //used for the input values updates/changes (empty string)
   const [name, setName] = useState(''); 
@@ -31,62 +32,21 @@ const TaskForm = (props) => {
   }
   console.log(comments)     
 
-
-
+/*Form*/  
 // const handleSubmit = (e) => {   
 const taskFormSubmitter = (e) => {   //this event is passed into the function since it is bound to the onSubmit
   e.preventDefault();           //to stop the default refresh inorder to avoid page reload and loss of state
-  // console.log("you have clicked a button.")
-  console.log(date);
-  console.log(name);
-  console.log(deadline);
-  console.log(comments);
+  console.log("you have clicked a button.")
+
+  fetch("http://localhost:4000/taskers", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify( {date, name, deadline, comments} ),
+  })
   
 }
-
-//***** Duplicate Code -- DELETE!!! these lines of state */
-// const TaskForm = (props) => {
-//   /*State*/
-//   const [date, setDate] = useState('');  //state used for the input field with empty string
-//   const [name, setName] = useState(''); 
-//   const [deadline, setDeadline] = useState(''); 
-//   const [comments, setComments] = useState(''); 
-
-
-  /*An easier way used to create one bucket to capture state
-  const [formData, setFormData] = useState({
-    date:'', 
-    name:'', 
-    deadline:'';
-    comments:'';
-  })
-
-  //***** Duplicate Code -- DELETE!!! these lines of Event Handlers */
-  // /*Event Handler*/
-  // const changeDate = (e) => {   //receives the default event (e) object and captures the value of the change event
-  //   setDate(e.target.value)
-  // }
-  // console.log(date)     //used to store the tracked changes in the console due to the input change handler
-
-  // const changeName = (e) => {    
-  //   setName(e.target.value)
-  // }
-  // console.log(name)     
-
-  // const changeDeadline = (e) => { 
-  //   setDeadline(e.target.value)    //this is the user input that gives access to this value on the event target
-  // }
-  // console.log(deadline)  
-
-  // const changeComments = (e) => {   
-  //   setComments(e.target.value)
-  // }
-  // console.log(comments)     
-
-
-
-// console.log(formData)   used to track the changes for the formData changes
-
 
   return (
     <div className="container">
@@ -125,3 +85,93 @@ const taskFormSubmitter = (e) => {   //this event is passed into the function si
 }
 
 export default TaskForm;
+
+
+
+
+/*******Extra code to possibly delete the**********/
+// useEffect( () => {
+  //    fetch("http://localhost:4000/taskers", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json"
+  //   },
+  //   body: JSON.stringify(taskFormSubmitter),
+  //  })
+  // })
+
+  
+// const addTasker = (tasker) => {
+
+  //  fetch("http://localhost:4000/taskers", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json"
+  //   },
+  //   body: JSON.stringify(tasker),
+  //  })
+    
+  //    .then(resp => resp.json())
+  //    .then( tasker => {
+  //      const newTaskers = { ...taskers, tasker};
+  //      setTaskers(newTaskers);
+  //      console.log(tasker);
+  //   })
+
+  //***** Duplicate Code -- DELETE!!! these lines of Event Handlers */
+  // /*Event Handler*/
+  // const changeDate = (e) => {   //receives the default event (e) object and captures the value of the change event
+  //   setDate(e.target.value)
+  // }
+  // console.log(date)     //used to store the tracked changes in the console due to the input change handler
+
+  // const changeName = (e) => {    
+  //   setName(e.target.value)
+  // }
+  // console.log(name)     
+
+  // const changeDeadline = (e) => { 
+  //   setDeadline(e.target.value)    //this is the user input that gives access to this value on the event target
+  // }
+  // console.log(deadline)  
+
+  // const changeComments = (e) => {   
+  //   setComments(e.target.value)
+  // }
+  // console.log(comments)     
+
+
+// console.log(formData)   used to track the changes for the formData changes
+
+//  }).then(() => {
+  // // //      const newTasker = { ...taskers, tasker};
+  //       setDate(newTasker);
+  //       setName(newTasker);
+  //       setDeadline(newTasker);
+  //       setComments(newTasker);
+
+  //     // console.log(newTasker);
+  //     // console.log('new task added');
+  //  })
+
+  // console.log(date);
+  // console.log(name);
+  // console.log(deadline);
+  // console.log(comments);
+
+  //***** Duplicate Code -- DELETE!!! these lines of state */
+// const TaskForm = (props) => {
+//   /*State*/
+//   const [date, setDate] = useState('');  //state used for the input field with empty string
+//   const [name, setName] = useState(''); 
+//   const [deadline, setDeadline] = useState(''); 
+//   const [comments, setComments] = useState(''); 
+
+
+  /*An easier way used to create one bucket to capture state
+  const [formData, setFormData] = useState({
+    date:'', 
+    name:'', 
+    deadline:'';
+    comments:'';
+  })*/

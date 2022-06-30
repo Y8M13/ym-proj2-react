@@ -21,6 +21,7 @@ function App() {
         <Route path="tasklog/:id" component={ TaskDetails } /> {/*allows for additional info page*/}
         <Route path="/taskform" exact component={ TaskForm } /> 
         </Switch>
+        {TaskForm}
       </div>
     </Router>
   );

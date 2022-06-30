@@ -18,18 +18,25 @@
   },
   "taskers": [
     {
-        "id": 1,
-        "date": "13 June 2022",
-        "name": "Calculus",
-        "deadline": "18 June 2022",
-        "comments": "Need to complete chapter 2"
+      "id": 1,
+      "date": "13 June 2022",
+      "name": "Calculus",
+      "deadline": "18 June 2022",
+      "comments": "Need to complete chapter 2"
     },
     {
-        "id": 2,
-        "date": "16 June 2022",
-        "name": "Pay Bills",
-        "deadline": "20 June 2022",
-        "comments": "June bills are DUE!"
+      "id": 2,
+      "date": "16 June 2022",
+      "name": "Pay Bills",
+      "deadline": "20 June 2022",
+      "comments": "June bills are DUE!"
+    },
+    {
+      "date": "29 June 2022",
+      "name": "Clean Room",
+      "deadline": "1 July 2022",
+      "comments": "Need to clean this messy room!",
+      "id": 3
     }
   ]
 }

@@ -8,8 +8,6 @@ import TaskDetails from './components/TaskDetails.js';
 import TaskForm from './components/TaskForm.js';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-
-
 function App() {
   return (
     <Router>
@@ -21,7 +19,7 @@ function App() {
         <Route path="tasklog/:id" component={ TaskDetails } /> {/*allows for additional info page*/}
         <Route path="/taskform" exact component={ TaskForm } /> 
         </Switch>
-        {TaskForm}
+        {/* {TaskForm} */}
       </div>
     </Router>
   );

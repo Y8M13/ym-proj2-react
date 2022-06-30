@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 
 const TaskForm = () => {
-    
+  
   //State//  
   const [date, setDate] = useState('');  //used for the input values updates/changes (empty string)
   const [name, setName] = useState(''); 
@@ -30,7 +30,8 @@ const TaskForm = () => {
   const changeComments = (e) => {   
     setComments(e.target.value)
   }
-  console.log(comments)     
+  console.log(comments)  
+    
 
 /*Form*/  
 // const handleSubmit = (e) => {   
